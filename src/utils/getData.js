@@ -1,7 +1,5 @@
 import data from "../productos.json";
 
-
-
 const getData = () => {
     
     return new Promise((res, rej) => {

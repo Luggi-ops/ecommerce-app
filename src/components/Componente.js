@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import getData from '../utils/getData'
+import ComponenteLista from './ComponenteLista'
 
 const Componente = () => {
 
@@ -13,7 +14,13 @@ const Componente = () => {
   console.log("ésta data viene del async mock", data)
 
   return (
-    <div>Componente</div>
+    <div style={{display: "flex", flexWrap: "wrap", gap: "5px"}}>
+      {
+        data.map((item) => (
+          <ComponenteLista producto={item} key={item.id}/>
+        ))
+      }
+    </div>
   )
 }
 
